@@ -1,0 +1,139 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Contenedor del Header */
+.contenedor {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-image: url(../img/arriba.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10px;
+}
+
+/* Logo */
+.logo {
+  font-size: 20px;
+}
+
+/* Estilo de los elementos de la lista */
+.lista ul {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  list-style: none;
+}
+
+.lista ul li {
+  display: inline-block;
+}
+
+.a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  padding: 0 10px;
+  position: relative;
+}
+
+.a:before,
+.a:after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 0;
+  background-color: #00aeff;
+  transition: 0.5s;
+}
+
+.a:before {
+  right: 0;
+  top: -10px;
+}
+
+.a:after {
+  left: 0;
+  bottom: -10px;
+}
+
+.a:hover {
+  color: #0601ff;
+}
+
+.a:hover:before,
+.a:hover:after {
+  width: 100%;
+}
+
+/* Botón de WhatsApp */
+.contacto {
+  margin-left: 20px;
+}
+
+.contacto a {
+  font-size: 20px; /* Tamaño de fuente en escritorio */
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  background-color: #25D366; /* Color de fondo de WhatsApp */
+  border-radius: 5px;
+}
+@media (max-width: 768px) {
+  .contacto a {
+      font-size: 10px; /* Reduce el tamaño de la fuente en pantallas pequeñas */
+  }
+}
+
+/* Menú Hamburguesa (para móviles) */
+.hamburguesa {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.hamburguesa .bar {
+  height: 4px;
+  width: 100%;
+  background-color: white;
+}
+
+/* Responsivo: Se activa en pantallas pequeñas */
+@media (max-width: 768px) {
+  .lista ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      position: absolute;
+      top: 70px;
+      left: 0;
+  }
+
+  .lista ul.active {
+      display: flex;
+  }
+
+  .hamburguesa {
+      display: flex;
+  }
+
+  .lista ul li {
+      text-align: center;
+      margin: 10px 0;
+  }
+}

@@ -1,0 +1,103 @@
+/* Reset de padding y margin para evitar espacios no deseados */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Contenedor principal de la página */
+.conten {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    background-image: url(../img/fondo-perfil.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* Sección "¿Quiénes somos?" */
+.somos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.somos h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.somos p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.imagen-somos {
+    width: 70%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Sección de Misión y Visión */
+.otros {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.puntos {
+    width: 45%;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.puntos h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.puntos p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.imagen-servicio {
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para dispositivos móviles */
+@media (max-width: 768px) {
+    .somos {
+        width: 100%;
+    }
+
+    .otros {
+        flex-direction: column;
+    }
+
+    .puntos {
+        width: 100%;
+    }
+
+    .imagen-somos,
+    .imagen-servicio {
+        width: 90%;
+    }
+
+    .conten {
+        padding: 10px;
+    }
+}
